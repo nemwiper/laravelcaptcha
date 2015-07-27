@@ -27,11 +27,11 @@ return [
 	//Is there random line on the captcha?
 	'line' => false,
 	
-	//Size of the image captcha
+	//Size of the image captcha in px
 	'width' => 60,
 	'height' => 20,
 	
-	//Size of the image displayed in the view
+	//Size of the image displayed in the view in px
 	'width-html' => 100,
 	'height-html' => 30,
 
