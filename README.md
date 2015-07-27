@@ -1,4 +1,7 @@
+
 # LaravelCaptcha
+
+Working on **Laravel 5**.
 
 ![Captcha Example](http://www.imageupload.co.uk/images/2015/07/27/captcha.png)
 
