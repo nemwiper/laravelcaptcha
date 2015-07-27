@@ -1,0 +1,23 @@
+{
+    "name": "lucbu/laravelcaptcha",
+    "description": "Create captcha easily with laravel.",
+    "keywords": ["captcha", "audio", "validation", "languages"],
+    "type": "plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucas Burdeyron",
+            "email": "lucas.burdeyron@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lucbu\\LaravelCaptcha\\": "src/"
+        }
+    },
+    "require": {
+		"laravel/framework": "~5.0",
+		"php": ">=5.3.0"
+	},
+	"minimum-stability" : "dev"
+}
