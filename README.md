@@ -52,7 +52,7 @@ public function rules() {
         'captcha' => 'required|lucbularavelcaptcha:is_caseSensitive'
     ];
 }
-```php
+```
 You can set the parameters is_caseSensitive as 'true' or 'false', the validation will take care or not of matching the case (false by default).
 
 You can generate a captcha in a controller like this :
