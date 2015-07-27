@@ -27,6 +27,12 @@ return [
 	//Is there random line on the captcha?
 	'line' => false,
 	
+	//Apply smooth filter to captcha
+	'filter-smooth' => true,
+	
+	//Level of filter
+	'filter-smooth-level' => 20,
+
 	//Size of the image captcha in px
 	'width' => 60,
 	'height' => 20,

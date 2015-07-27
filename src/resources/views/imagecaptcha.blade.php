@@ -32,7 +32,9 @@ if(Config::get('lucbu-laravelcaptcha.line')){
     }
 }
 
-imagefilter($im, IMG_FILTER_SMOOTH, 20);
+if(Config::get('lucbu-laravelcaptcha.filter-smooth')){
+	imagefilter($im, IMG_FILTER_SMOOTH, Config::get('lucbu-laravelcaptcha.filter-smooth-level'));
+}
 
 imagepng($im);
 imagedestroy($im);
