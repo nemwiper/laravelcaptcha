@@ -1,5 +1,7 @@
 # LaravelCaptcha
 
+![Captcha Example](http://www.imageupload.co.uk/images/2015/07/27/captcha.png)
+
 ## Installation
 
 Install with composer :
