@@ -5,16 +5,18 @@
 Install with composer :
 
 ```
-composer require lucbu\laravelcaptcha
+composer require lucbu\laravelcaptcha dev-master
 ```
 
-Just add 
+Just add in the array `providers` in the file `config\app.php`.
 ```
 'Lucbu\LaravelCaptcha\CaptchaServiceProvider',
 ``` 
-in the array `providers` in the file `config\app.php`.
 
-Publish the package using the command `php artisan vendor:publish`
+Publish the package using the command 
+```
+php artisan vendor:publish
+```
 
 ## Configuration
 

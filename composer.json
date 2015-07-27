@@ -1,7 +1,7 @@
 {
     "name": "lucbu/laravelcaptcha",
     "description": "Create captcha easily with laravel.",
-    "keywords": ["captcha", "audio", "validation", "languages"],
+    "keywords": ["captcha", "audio", "validation", "languages", "laravel"],
     "type": "plugin",
     "license": "MIT",
     "authors": [
