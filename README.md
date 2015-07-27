@@ -1,4 +1,3 @@
-
 # LaravelCaptcha
 
 Working on **Laravel 5**.
@@ -8,25 +7,23 @@ Working on **Laravel 5**.
 ## Installation
 
 Install with composer :
-
 ```
 composer require lucbu\laravelcaptcha dev-master
 ```
 
-Just add in the array `providers` in the file `config\app.php`.
-```
+Just add in the array `providers` in the file `config\app.php`:
+```php
 'Lucbu\LaravelCaptcha\CaptchaServiceProvider',
 ``` 
 
-Publish the package using the command 
+Publish the package using the command :
 ```
 php artisan vendor:publish
 ```
 
 ## Configuration
 
-In the file `config\lucbu-laravelcaptcha.php` their is some parameters you can configurate:
-
+In the file `config\lucbu-laravelcaptcha.php` there is some parameters that you can modify:
  * length: The length of the captcha (should be an integer)
  * listForbidden: list of letters that won't appear in captcha
  * icon-play: Path to icon image used to display the clicking button to hear the sounds of letters
@@ -44,25 +41,22 @@ In the file `config\lucbu-laravelcaptcha.php` their is some parameters you can c
 ## Usage
 
 In the form view, just use the following code :
-```
+```php
 @include('lucbu-laravelcaptcha::captcha')
 ```
 
 You can validate the fields that has to be fulfill with captcha with the rule `lucbularavelcaptcha` :
-
-```
+```php
 public function rules() {
     return [
         'captcha' => 'required|lucbularavelcaptcha:is_caseSensitive'
     ];
 }
-```
-
+```php
 You can set the parameters is_caseSensitive as 'true' or 'false', the validation will take care or not of matching the case (false by default).
 
 You can generate a captcha in a controller like this :
-
-```
+```php
 <?php namespace App\Http\Controllers;
 
 use Lucbu\LaravelCaptcha\Services\Captcha;
