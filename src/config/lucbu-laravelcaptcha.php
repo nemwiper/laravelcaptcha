@@ -27,9 +27,13 @@ return [
 	//Is there random line on the captcha?
 	'line' => false,
 	
+	//Size of the image captcha
+	'width' => 60,
+	'height' => 20,
 	
-	'width' => 100,
-	'height' => 30,
+	//Size of the image displayed in the view
+	'width-html' => 100,
+	'height-html' => 30,
 
 	'sessionKey' => 'lucbularavelcaptcha',
 
