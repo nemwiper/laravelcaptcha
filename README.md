@@ -29,7 +29,8 @@ In the file `config\lucbu-laravelcaptcha.php` their is some parameters you can c
  * background-color: color of the captcha background (use red green blue notation ['red' => $red, 'green' => $green, 'blue' => $blue])
  * text-color: color of the captcha text (use red green blue notation)
  * grid: Is there a grid behind the letters?
- * grid: Is there random lines on the captcha?
+ * space-grid: Space between the line of the grid
+ * line: Is there random lines on the captcha?
  * width: width of the captcha image;
  * height: height of the captcha image
  * sessionKey: the key used to store the captcha in Session Variable

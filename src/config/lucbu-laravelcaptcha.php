@@ -13,17 +13,21 @@ return [
 	'icon-update' => '/lucbu/laravelcaptcha/pictures/update-icon.png',
 
 	//color of the captcha background (use red green blue notation)
-	'background-color' => ['red' => 255, 'green' => 0, 'blue' => 255],
+	'background-color' => ['red' => 239, 'green' => 228, 'blue' => 176],
 
 	//color of the captcha text (use red green blue notation)
 	'text-color' => ['red' => 0, 'green' => 0, 'blue' => 255],
 
 	//Is there a grid behind the letters?
 	'grid' => true,
+	
+	//Space between line
+	'space-grid' => 7,
 
 	//Is there random line on the captcha?
 	'line' => false,
-
+	
+	
 	'width' => 60,
 	'height' => 20,
 

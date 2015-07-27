@@ -7,12 +7,13 @@ $im = imagecreate($width, $height);
 $bg = imagecolorallocate($im, Config::get('lucbu-laravelcaptcha.background-color.red'), Config::get('lucbu-laravelcaptcha.background-color.green'), Config::get('lucbu-laravelcaptcha.background-color.blue'));
 $textcolor = imagecolorallocate($im, Config::get('lucbu-laravelcaptcha.text-color.red'), Config::get('lucbu-laravelcaptcha.text-color.green'), Config::get('lucbu-laravelcaptcha.text-color.blue'));
 
+$lineSpace = Config::get('lucbu-laravelcaptcha.space-grid');
 if(Config::get('lucbu-laravelcaptcha.grid')){
-    for($h=1;$h<$width;$h+=5){
+    for($h=1;$h<$width;$h+=$lineSpace){
         $color = imagecolorallocate($im, rand(0,255), rand(0,255), rand(0,255));
         imageline($im , $h , 0 , $h , $height , $color);
     }
-    for($k=1;$k<$height;$k+=5){
+    for($k=1;$k<$height;$k+=$lineSpace){
         $color = imagecolorallocate($im, rand(0,255), rand(0,255), rand(0,255));
         imageline($im , 0 , $k , $width , $k , $color);
     }
