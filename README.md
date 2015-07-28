@@ -33,8 +33,12 @@ In the file `config\lucbu-laravelcaptcha.php` there is some parameters that you 
  * grid: Is there a grid behind the letters?
  * space-grid: Space between the line of the grid
  * line: Is there random lines on the captcha?
+ * filter-smooth: Apply smooth filter to captcha
+ * filter-smooth-level: Level of filter
  * width: width of the captcha image;
  * height: height of the captcha image
+ * width-html: width of the image displayed in the view in px
+ * height-html: height of the image displayed in the view in px
  * sessionKey: the key used to store the captcha in Session Variable
  * default_language: the language in case we don't find the sounds for the locale
 
