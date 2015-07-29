@@ -19,7 +19,7 @@ Just add in the array `providers` in the file `config\app.php`:
 
 Publish the package using the command :
 ```
-php artisan vendor:publish
+php artisan vendor:publish --provider="Lucbu\LaravelCaptcha\CaptchaServiceProvider"
 ```
 
 ## Configuration
