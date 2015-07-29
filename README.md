@@ -1,6 +1,7 @@
 # LaravelCaptcha
 
-Working on **Laravel 5**.
+Working on **Laravel 5**. 
+French, English and Spanish!!!
 
 ![Captcha Example](http://www.imageupload.co.uk/images/2015/07/27/captcha.png)
 
