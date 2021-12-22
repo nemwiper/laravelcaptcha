@@ -79,3 +79,6 @@ The function will create the captcha and store into the session variable.
 You can also get just the image using the route `lucbu.laravelcaptcha.image` or the sound with the route `lucbu.laravelcaptcha.sound`.
 
 The player used to play the sound is based on HTML5. (`<audio>` tag)
+
+## Collaborators
+@Nembie
