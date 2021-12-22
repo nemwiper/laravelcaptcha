@@ -7,7 +7,7 @@ French, English, Spanish and Italian!!!
 
 Install with composer :
 ```
-composer require lucbu\laravelcaptcha dev-master
+composer require nemwiper\laravelcaptcha
 ```
 
 Just add in the array `providers` in the file `config\app.php`:
