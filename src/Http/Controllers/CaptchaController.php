@@ -9,6 +9,8 @@ use Session;
 use Response;
 use Config;
 use App;
+use Log;
+use falahati\PHPMP3\MpegAudio;
 
 class CaptchaController extends Controller
 {
@@ -33,16 +35,14 @@ class CaptchaController extends Controller
         $path = 'lucbu/laravelcaptcha/sounds/'.$lang.'/';
         if(!file_exists($path))
             $path = 'lucbu/laravelcaptcha/sounds/'.Config::get('lucbu-laravelcaptcha.default_language').'/';
-        $file_content = '';
-        $file_content .= file_get_contents($path . 'blank.mp3') . file_get_contents($path . 'blank.mp3');
-        $cc = '';
+
+        $audio = new MpegAudio();
         for($i = 0; $i < strlen($captcha); $i++){
             $c = $captcha[$i];
-            $cc .= $c;
-            $file_content .= file_get_contents($path . $c.'.mp3');
+            $audio->append(MpegAudio::fromFile($path . $c . '.mp3'));
         }
 
-        return Response::view('lucbu-laravelcaptcha::soundcaptcha', ['captcha' => $file_content])->header('Content-Type', "audio/mpeg");
+        return Response::view('lucbu-laravelcaptcha::soundcaptcha', ['captcha' => $audio->getFrameData(0)])->header('Content-Type', "audio/mpeg");
     }
 
     public function captchaUpdate(){

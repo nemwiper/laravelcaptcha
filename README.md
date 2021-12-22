@@ -1,9 +1,7 @@
 # LaravelCaptcha
 
-Working on **Laravel 5**. 
-French, English and Spanish!!!
-
-![Captcha Example](http://www.imageupload.co.uk/images/2015/07/27/captcha.png)
+Working on **Laravel 5-8**. 
+French, English, Spanish and Italian!!!
 
 ## Installation
 
@@ -16,6 +14,8 @@ Just add in the array `providers` in the file `config\app.php`:
 ```php
 'Lucbu\LaravelCaptcha\CaptchaServiceProvider',
 ``` 
+
+If your Laravel version supports autodiscovery this step is not necessary
 
 Publish the package using the command :
 ```
@@ -49,6 +49,7 @@ In the form view, just use the following code :
 ```php
 @include('lucbu-laravelcaptcha::captcha')
 ```
+and add an input with name="captcha" for inserting the captcha.
 
 You can validate the fields that has to be fulfill with captcha with the rule `lucbularavelcaptcha` :
 ```php

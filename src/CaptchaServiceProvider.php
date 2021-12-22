@@ -6,6 +6,7 @@ use Session;
 use Config;
 use Validator;
 use Lang;
+use Log;
 
 class CaptchaServiceProvider extends ServiceProvider {
 
@@ -22,8 +23,8 @@ class CaptchaServiceProvider extends ServiceProvider {
 
 			$captcha = Session::get($sessionKey);
 
-			if(!$case_sensitive){
-				return ($value == $captcha || $value == strtolower($captcha) || $value == strtoupper($captcha));
+            if(!$case_sensitive){
+                return ($value == $captcha || $value == strtolower($captcha) || $value == strtoupper($captcha));
 			}
             return $value == $captcha;
         });

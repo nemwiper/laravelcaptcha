@@ -19,7 +19,6 @@ function captchaActualise()
     xmlhttp.onreadystatechange=function(){
         if (xmlhttp.readyState==4 && xmlhttp.status==200){
             document.getElementById("captchamedia").innerHTML = xmlhttp.responseText;
-            console.log('test');
         }
     }
     xmlhttp.open("GET","{{route('lucbu.laravelcaptcha.update')}}",true);
