@@ -1,5 +1,5 @@
 {
-    "name": "nemwiper/laravelcaptcha",
+    "name": "nembie/laravelcaptcha",
     "description": "Create captcha easily with laravel.",
     "keywords": ["captcha", "audio", "validation", "languages", "laravel"],
     "type": "plugin",
