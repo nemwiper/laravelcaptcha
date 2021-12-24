@@ -81,4 +81,4 @@ You can also get just the image using the route `lucbu.laravelcaptcha.image` or 
 The player used to play the sound is based on HTML5. (`<audio>` tag)
 
 ## Collaborators
-@Nembie
+[@Nembie](https://github.com/Nembie)
