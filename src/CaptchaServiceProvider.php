@@ -1,17 +1,23 @@
-<?php namespace Lucbu\LaravelCaptcha;
+<?php
 
-use Illuminate\Support\ServiceProvider;
+namespace Lucbu\LaravelCaptcha;
+
 use View;
-use Session;
-use Config;
-use Validator;
 use Lang;
-use Log;
+use Config;
+use Session;
+use Validator;
+use Illuminate\Support\ServiceProvider;
 
-class CaptchaServiceProvider extends ServiceProvider {
-
-	public function boot() {
-
+class CaptchaServiceProvider extends ServiceProvider
+{
+	/**
+	 * Bootstrap the application services.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
 		//New rule validation on captcha
 		Validator::extend('lucbularavelcaptcha', function($attribute, $value, $parameters) {
 			$sessionKey = Config::get('lucbu-laravelcaptcha.sessionKey');
@@ -47,7 +53,13 @@ class CaptchaServiceProvider extends ServiceProvider {
 		View::composer('lucbu-laravelcaptcha::captcha', 'Lucbu\LaravelCaptcha\Http\ViewComposers\CaptchaViewComposer');
 	}
 
-	public function register() {
+	/**
+	 * Register the application services.
+	 *
+	 * @return void
+	 */
+	public function register()
+	{
 		$this->app->make('Lucbu\LaravelCaptcha\Http\Controllers\CaptchaController');
 	}
 }

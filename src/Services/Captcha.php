@@ -1,12 +1,20 @@
-<?php namespace Lucbu\LaravelCaptcha\Services;
+<?php
 
-use Illuminate\Support\Str;
-use Session;
+namespace Lucbu\LaravelCaptcha\Services;
+
 use Config;
+use Session;
+use Illuminate\Support\Str;
 
-class Captcha {
-
-    public static function generateCaptcha(){
+class Captcha
+{
+    /**
+     * Generate captcha
+     *
+     * @return string
+     */
+    public static function generateCaptcha()
+    {
         $length = Config::get('lucbu-laravelcaptcha.length');
 		$listForbidden = Config::get('lucbu-laravelcaptcha.listForbidden');
 
