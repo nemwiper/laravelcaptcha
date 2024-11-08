@@ -21,11 +21,9 @@ class CaptchaServiceProvider extends ServiceProvider
 		//New rule validation on captcha
 		Validator::extend('lucbularavelcaptcha', function($attribute, $value, $parameters) {
 			$sessionKey = Config::get('lucbu-laravelcaptcha.sessionKey');
-			$case_sensitive = false;
-			if(isset($parameters[0])){
-				if($parameters[0] == 'true')
-				$case_sensitive =  true;
-			}
+
+			// Check if parameters has "is_caseSensitive" value
+			$case_sensitive = in_array('is_caseSensitive', $parameters);
 
 			$captcha = Session::get($sessionKey);
 
