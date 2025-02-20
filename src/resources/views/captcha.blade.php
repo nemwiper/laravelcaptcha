@@ -1,5 +1,5 @@
 <div style="display:inline-block">
-{{--    <img src="{{ asset(Config::get('lucbu-laravelcaptcha.icon-play')) }}" alt="Play" height="12px" style="display:inline-block;cursor:pointer;" onclick="document.getElementById('captchasound').play();"/>--}}
+    {{--<img src="{{ asset(Config::get('lucbu-laravelcaptcha.icon-play')) }}" alt="Play" height="12px" style="display:inline-block;cursor:pointer;" onclick="document.getElementById('captchasound').play();"/>--}}
     <img src="{{ asset(Config::get('lucbu-laravelcaptcha.icon-update')) }}" alt="Update" height="12px" style="cursor:pointer;" onclick="captchaActualise();"/>
 </div>
 
